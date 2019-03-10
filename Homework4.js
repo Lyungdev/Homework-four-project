@@ -1,3 +1,4 @@
+/* Using XMLHttpRequest to get and sort user's email in alphabetical order */
 function PopulateWithXMLRequest() {
     const req = new XMLHttpRequest(); 
     req.open('GET', 'https://jsonplaceholder.typicode.com/users'); 
@@ -31,7 +32,7 @@ function PopulateWithXMLRequest() {
     req.send(); // Add request to task queue
 }
 
-
+/* Using fetch and promise to get and sort username by length */
 function PopulateWithFetch() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(function(response) {
@@ -59,7 +60,7 @@ function PopulateWithFetch() {
         });
 }
 
-
+/*  Main function to be called on page load  */
 function Main() {
     PopulateWithXMLRequest();
     PopulateWithFetch();
